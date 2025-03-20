@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { useQuery } from '@apollo/client';
-import { GET_REVIEWS } from '../../api/reviewQueries';
+import { GET_REVIEWS } from '../../api/reviewQueries.js';
 import './MapView.css';
 
 // Add your Mapbox access token here
-mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN || '';
+mapboxgl.accessToken = (import.meta.env.VITE_MAPBOX_TOKEN as string) || '';
 
 interface MapViewProps {
   onLocationSelect?: (coords: { lng: number; lat: number; address: string }) => void;
@@ -60,13 +62,13 @@ const MapView: React.FC<MapViewProps> = ({ onLocationSelect }) => {
     }));
 
     // Add geocoder for searching addresses
-    const geocoder = new mapboxgl.Geocoder({
-      accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl,
+    const geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken as string,
+      mapboxgl: mapboxgl as any, // Force TypeScript to accept this
       marker: false,
       placeholder: 'Search for a location',
     });
-
+    
     map.current.addControl(geocoder);
 
     // Handle geocoder result

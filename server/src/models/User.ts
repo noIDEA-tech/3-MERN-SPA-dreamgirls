@@ -1,6 +1,15 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
+// Define the interface for User document
+export interface IUser extends mongoose.Document {
+  username: string;
+  email: string;
+  password: string;
+  reviews: mongoose.Types.ObjectId[];
+  isCorrectPassword(password: string): Promise<boolean>;
+}
+
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -28,7 +37,7 @@ const userSchema = new mongoose.Schema({
 });
 
 // Hash user password before saving
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function(next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -37,10 +46,10 @@ userSchema.pre('save', async function (next) {
 });
 
 // Validate password for login
-userSchema.methods.isCorrectPassword = async function (password: string) {
-  return bcrypt.compare(password, this.password);
+userSchema.methods.isCorrectPassword = async function(password: string): Promise<boolean> {
+  return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model<IUser>('User', userSchema);
 
 export default User;

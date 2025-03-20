@@ -1,5 +1,6 @@
 // Use this file to decode a token and get the user's information out of it
-import decode from 'jwt-decode';
+import * as jwt from 'jwt-decode';
+const decode = jwt.jwtDecode;
 
 // Create a new class to instantiate for a user
 class AuthService {

@@ -1,5 +1,5 @@
-import { User, Review } from '../models/index';
-import { signToken, AuthenticationError } from '../utils/auth';
+import { User, Review } from '../models/index.js';
+import { signToken, AuthenticationError } from '../utils/auth.js';
 import { GraphQLError } from 'graphql';
 
 const resolvers = {
