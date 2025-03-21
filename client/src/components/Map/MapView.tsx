@@ -19,7 +19,7 @@ const MapView: React.FC<MapViewProps> = ({ onLocationSelect }) => {
   const map = useRef<mapboxgl.Map | null>(null);
   const [lng, setLng] = useState(-97.7431); // Default to US center
   const [lat, setLat] = useState(30.2672); // Default to US center
-  const [zoom, setZoom] = useState(12);
+  const [zoom] = useState(12);
   const [selectedLocation, setSelectedLocation] = useState<{
     lng: number;
     lat: number;

@@ -4,7 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 import './index.css';
 
 const Header: React.FC = () => {
-  const { isLoggedIn, user, logout } = useAuth();
+  const { isLoggedIn, logout } = useAuth();
   const location = useLocation();
 
   return (
