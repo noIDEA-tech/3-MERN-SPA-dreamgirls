@@ -52,8 +52,11 @@ const resolvers = {
   Mutation: {
     addUser: async (parent: any, { username, email, password }: { username: string, email: string, password: string }) => {
       try {
+        console.log('here are args', username, email, password);
         const user = await User.create({ username, email, password });
-        const token = signToken(username, email, user._id);
+        console.log('here is user', user);
+        const token = signToken(username, email, user._id);  
+        console.log('here is token', token);
         return { token, user };
       } catch (err: any) {
         if (err.code === 11000) {
@@ -61,6 +64,8 @@ const resolvers = {
             extensions: { code: 'BAD_USER_INPUT' }
           });
         }
+        console.log('here is error', err);
+        return { error: err }
         throw err;
       }
     },
