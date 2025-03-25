@@ -1,4 +1,4 @@
-# Safe Spotter 🛡️
+# Safe Spotter 🛡️ 
 A MERN stack application that allows users to report and view safety concerns in their area.
 
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
@@ -9,16 +9,14 @@ A MERN stack application that allows users to report and view safety concerns in
 Safe Spotter is a community-driven platform where users can share safety reviews for locations they've visited or experienced safety concerns. The application uses real-time mapping to visualize safety data and helps users make informed decisions about the places they visit.
 
 ## Website Links: 
-- [GitHub-website](https://github.com/noIDEA-tech/20-CI-CD-GitHub-Actions)
-- [Deployed-website](https://two0-ci-cd-github-actions.onrender.com)
-
-<!-- This application is deployed on Render and can be accessed at [safe-spotter.onrender.com](https://safe-spotter.onrender.com). -->
+- [GitHub-website](https://github.com/kagreene/dreamgirls)
+- [Deployed-website](https://dreamgirls.onrender.com) 
 
 ## Screenshots
-<!-- TODO: import screenshots of browser -->
-![app_image](/client/assets)
-![app_image](/client/assets/)
-![app_image](/client/assets/)
+
+![app_image](/client/assets/image1.png)
+![app_image](/client/assets/image2.png)
+![app_image](/client/assets/image3.png)
 
 ## Table of Contents:
 - [Installation](#installation)
@@ -28,7 +26,7 @@ Safe Spotter is a community-driven platform where users can share safety reviews
 - [Tests](#tests)
 - [Credits](#credits)
 - [License](#license)
-- [Contact](#contact)
+- [Contact-Us](#contact-us)
 
 ## Installation
 
@@ -95,13 +93,17 @@ If you'd like to contribute to this project, please follow these steps:
 - Kristen Greene
 - Paige Feldman
 - Nancy Watreas
-    - Claude ai Anthropic 
+  -  Assistance with Cypress test implementation was provided by Anthropic (2025). Claude.ai (AI Assistant) https://claude.ai 
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Contact:
-If there are any questions or concerns, I can be reached at:
-##### [github: noIDEA-tech](https://github.com/noIDEA-tech)
-##### [email: nwatreas2023@gmail.com](mailto:nwatreas2023@gmail.com)
+## Contact Us:
+If there are any questions or concerns, please feel free to contact us via GitHub or email:
+#### [github: kagreene](https://github.com/kagreene) 
+#### [email: kristengreene2023@u.northwestern.edu](mailto:kristengreene2023@u.northwestern.edu)
+#### [github: pfeldmannn](https://github.com/pfeldmannn)
+#### [email: paigeafeldmann@gmail.com](mailto:paigeafeldmann@gmail.com)
+#### [github: noIDEA-tech](https://github.com/noIDEA-tech)
+#### [email: nwatreas2023@gmail.com](mailto:nwatreas2023@gmail.com)
