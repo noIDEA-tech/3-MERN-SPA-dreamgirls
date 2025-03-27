@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="container">
         <p>&copy; {currentYear} Safe Spotter. All rights reserved.</p>
         <p>
-          <a href="/about">About</a> | 
+          <a href="/about">About</a> |
           <a href="/privacy">Privacy Policy</a> | 
           <a href="/terms">Terms of Service</a>
         </p>

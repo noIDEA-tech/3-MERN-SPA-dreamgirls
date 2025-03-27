@@ -1,8 +1,13 @@
 /// <reference types="vite/client" />
 
-// interface ImportMeta {
-//   readonly env: {
-//     readonly VITE_MAPBOX_TOKEN: string;
-//     readonly [key: string]: string | undefined;
-//   }
-// }
+interface ImportMeta {
+    readonly env: {
+      readonly VITE_MAPBOX_TOKEN: string;
+      readonly VITE_APP_API_URL?: string; // Optional API URL if you're configuring it
+      readonly MODE: string;
+      readonly DEV: boolean;
+      readonly PROD: boolean;
+      readonly SSR: boolean;
+      [key: string]: string | undefined;
+    };
+  }
