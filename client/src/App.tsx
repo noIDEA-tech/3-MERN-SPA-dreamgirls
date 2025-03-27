@@ -12,6 +12,9 @@ import AddReview from './pages/AddReview';
 import EditReview from './pages/EditReview';
 import ReviewDetail from './pages/ReviewDetail';
 import Map from './pages/Map';
+import About from './pages/About';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import NotFound from './pages/NotFound';
 
 // Components
@@ -35,6 +38,10 @@ const App: React.FC = () => {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/map" element={<Map />} />
+                {/*added lines 42-44 for Footer links*/}
+                <Route path="/about" element={<About />} /> 
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsOfService />} />
                 <Route path="/add-review" element={<AddReview />} />
                 <Route path="/edit-review/:reviewId" element={<EditReview />} />
                 <Route path="/review/:reviewId" element={<ReviewDetail />} />
