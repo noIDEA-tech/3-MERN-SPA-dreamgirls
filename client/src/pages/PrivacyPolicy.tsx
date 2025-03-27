@@ -30,10 +30,7 @@ const PrivacyPolicy: React.FC = () => {
   
             <h3>Policy Updates</h3>
             <p>We may update this policy periodically. We will notify you of any significant changes by posting the new policy on this page.</p>
-  
-            <h3>Contact Us</h3>
-            <p>If you have questions about this Privacy Policy, please contact us at support@safespotter.com.</p>
-         
+       
           <Link to="/" className="btn btn-primary">
             Go Home
           </Link>
